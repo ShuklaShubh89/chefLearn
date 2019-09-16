@@ -14,7 +14,10 @@ node['ipaddress']
 node['memory']['total']
 
 template '/etc/motd' do
- source 'motd.erb' 
+ source 'motd.erb'
+ variables(
+   :name => 'shubham' 
+  )
  action :create
  owner 'root'
  group 'root'
